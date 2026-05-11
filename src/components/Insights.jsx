@@ -127,19 +127,19 @@ const Insights = () => {
             </div>
 
             {/* AI Recommendation Panel */}
-            <div className="m-8 mt-0 p-6 rounded-3xl bg-black text-white flex items-center justify-between gap-8 group">
-              <div className="flex items-center gap-6">
+            <div className="m-4 md:m-8 mt-0 p-6 rounded-3xl bg-black text-white flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 group">
+              <div className="flex flex-col md:flex-row items-center md:items-start lg:items-center text-center md:text-left gap-6">
                 <div className="w-14 h-14 rounded-2xl bg-blue-500 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/20 group-hover:rotate-6 transition-transform">
                   <Sparkles size={28} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-blue-400 uppercase tracking-widest mb-1">AI Recommendation</div>
-                  <p className="text-lg font-medium leading-relaxed">
+                  <div className="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-widest mb-1">AI Recommendation</div>
+                  <p className="text-base md:text-lg font-medium leading-relaxed">
                     “Increasing denial follow-up frequency for <span className="text-blue-400">UnitedHealthcare</span> could recover an additional <span className="text-blue-400">$12,400</span> this month.”
                   </p>
                 </div>
               </div>
-              <button className="px-6 py-3 rounded-xl bg-white text-black font-bold text-sm shrink-0 hover:bg-blue-50 transition-colors">
+              <button className="w-full lg:w-auto px-6 py-3 rounded-xl bg-white text-black font-bold text-sm shrink-0 hover:bg-blue-50 transition-colors">
                 Apply Action
               </button>
             </div>

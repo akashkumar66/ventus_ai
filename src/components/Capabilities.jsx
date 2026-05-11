@@ -23,13 +23,13 @@ const Card = ({ icon: Icon, title, description, accentColor, image, delay }) => 
       </div>
 
       {/* Bottom Content */}
-      <div className="p-10 flex flex-col flex-1">
-        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm ${accentColor}`}>
-          <Icon className="w-7 h-7" />
+      <div className="p-8 lg:p-10 flex flex-col flex-1">
+        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-6 md:mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm ${accentColor}`}>
+          <Icon className="w-6 h-6 md:w-7 md:h-7" />
         </div>
 
-        <h3 className="text-2xl font-bold mb-4">{title}</h3>
-        <p className="text-text-body text-lg leading-relaxed flex-1">{description}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{title}</h3>
+        <p className="text-text-body text-base md:text-lg leading-relaxed flex-1">{description}</p>
       </div>
     </motion.div>
   );
@@ -74,12 +74,12 @@ const Capabilities = () => {
   return (
     <section id="platform" className="py-32 bg-white relative">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-24">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[11px] font-bold tracking-[0.1em] uppercase mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[11px] font-bold tracking-[0.1em] uppercase mb-6 md:mb-8"
           >
             Capabilities
           </motion.div>
@@ -88,16 +88,16 @@ const Capabilities = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl lg:text-7xl font-bold mb-8"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8"
           >
-            Built for the <br /> <span className="text-gradient">messy middle</span> of operations.
+            Built for the <br className="hidden md:block" /> <span className="text-gradient">messy middle</span> of operations.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-text-body"
+            className="text-lg md:text-xl text-text-body px-4 md:px-0"
           >
             Most AI fails when it hits a portal, a legacy system, or a phone tree. <br className="hidden md:block" /> Ventus was built specifically for these enterprise edge cases.
           </motion.p>

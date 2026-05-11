@@ -82,66 +82,66 @@ const CTA = () => {
             mass: 1
           }}
           style={{ perspective: "2000px", transformOrigin: "center top" }}
-          className="glass-card rounded-[4rem] bg-white border-white/50 shadow-2xl p-12 lg:p-24 flex flex-col lg:flex-row gap-20 items-center overflow-hidden"
+          className="glass-card rounded-[2.5rem] lg:rounded-[4rem] bg-white border-white/50 shadow-2xl p-8 md:p-12 lg:p-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center overflow-hidden"
         >
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
               Hire your first <span className="text-gradient">AI teammate.</span>
             </h2>
-            <p className="text-xl text-text-body mb-12 max-w-lg mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-text-body mb-8 md:mb-12 max-w-lg mx-auto lg:mx-0">
               Join hundreds of enterprise companies who have automated their most tedious operations with Ventus.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {["Deployment in < 7 Days", "SOC 2 Type II & HIPAA Certified", "No-API Integration Required"].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 justify-center lg:justify-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 shrink-0">
                     <CheckCircle2 size={16} />
                   </div>
-                  <span className="font-semibold text-black">{item}</span>
+                  <span className="font-semibold text-sm md:text-base text-black">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="lg:w-1/2 w-full">
-            <div className="p-10 rounded-[3rem] bg-gray-50/50 border border-white shadow-inner relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-10">
+            <div className="p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-gray-50/50 border border-white shadow-inner relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-10 hidden md:block">
                 <Globe size={120} />
               </div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-8">Schedule a personalized demo</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8">Schedule a personalized demo</h3>
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-400 uppercase tracking-widest px-1">Full Name</label>
+                      <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Full Name</label>
                       <input
                         type="text"
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="w-full px-6 py-4 rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium"
+                        className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium text-sm md:text-base"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-400 uppercase tracking-widest px-1">Work Email</label>
+                      <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Work Email</label>
                       <input
                         type="email"
                         placeholder="john@enterprise.com"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className="w-full px-6 py-4 rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium"
+                        className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium text-sm md:text-base"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-400 uppercase tracking-widest px-1">Industry</label>
+                    <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Industry</label>
                     <select 
                       value={formData.industry}
                       onChange={(e) => setFormData({...formData, industry: e.target.value})}
-                      className="w-full px-6 py-4 rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium appearance-none"
+                      className="w-full px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl bg-white border border-gray-100 focus:border-blue-500 focus:outline-none transition-colors font-medium appearance-none text-sm md:text-base"
                     >
                       <option value="">Select Industry</option>
                       <option value="Healthcare RCM">Healthcare RCM</option>
@@ -156,7 +156,7 @@ const CTA = () => {
                     <motion.p 
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-red-500 text-sm font-bold text-center"
+                      className="text-red-500 text-xs md:text-sm font-bold text-center"
                     >
                       {error}
                     </motion.p>
@@ -164,12 +164,12 @@ const CTA = () => {
 
                   <button 
                   onClick={handleDiscoveryCall}
-                  className="w-full py-5 bg-black text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-neutral-800 transition-all shadow-xl shadow-black/10 group"
+                  className="w-full py-4 md:py-5 bg-black text-white rounded-xl md:rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 hover:bg-neutral-800 transition-all shadow-xl shadow-black/10 group"
                 >
                   Book Discovery Call
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
-                  <p className="text-center text-[10px] text-text-body font-medium uppercase tracking-[0.2em] mt-6 opacity-60">
+                  <p className="text-center text-[9px] text-text-body font-medium uppercase tracking-[0.2em] mt-4 md:mt-6 opacity-60">
                     Trusted by 500+ global enterprises
                   </p>
                 </form>

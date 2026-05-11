@@ -29,9 +29,9 @@ const Backing = () => {
             <h4 className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.2em] mb-10">
               Backed by world-class investors
             </h4>
-            <div className="flex items-center justify-center gap-8 lg:gap-12 w-full">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-12 w-full">
               {investors.map((item, i) => (
-                <div key={i} className="flex items-center justify-center h-8 lg:h-10 w-auto">
+                <div key={i} className="flex items-center justify-center h-6 md:h-8 lg:h-10 min-w-[80px]">
                   <img
                     src={item.logo}
                     alt={item.name}
@@ -53,9 +53,9 @@ const Backing = () => {
             <h4 className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.2em] mb-10">
               Built by the best team
             </h4>
-            <div className="flex items-center justify-center gap-8 lg:gap-10 w-full">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10 w-full">
               {teamFrom.map((item, i) => (
-                <div key={i} className="flex items-center justify-center h-8 lg:h-10 w-auto">
+                <div key={i} className="flex items-center justify-center h-6 md:h-8 lg:h-10 min-w-[80px]">
                   <img
                     src={item.logo}
                     alt={item.name}

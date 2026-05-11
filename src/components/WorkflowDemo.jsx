@@ -11,12 +11,12 @@ const WorkflowStep = ({ number, badge, title, features, linkText, image, isRever
       transition={{ duration: 0.8, delay: 0.1 }}
       className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 lg:gap-32 items-center py-24 relative`}
     >
-      <div className="lg:w-1/2 space-y-8 relative z-10">
+      <div className="lg:w-1/2 space-y-6 md:space-y-8 relative z-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-[10px] font-bold tracking-[0.2em] uppercase">
           {number} · {badge}
         </div>
         
-        <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
           {title}
         </h2>
         
@@ -26,12 +26,12 @@ const WorkflowStep = ({ number, badge, title, features, linkText, image, isRever
               <div className="w-5 h-5 rounded-full bg-neutral-100 flex items-center justify-center text-black shrink-0">
                 <CheckCircle2 size={12} />
               </div>
-              <span className="text-lg">{feature}</span>
+              <span className="text-base md:text-lg">{feature}</span>
             </div>
           ))}
         </div>
         
-        <div className="pt-6">
+        <div className="pt-4 md:pt-6">
           <a href="#cta" className="inline-flex items-center gap-2 font-bold text-black border-b-2 border-black/5 hover:border-black transition-all pb-1 group">
             {linkText}
             <ArrowUpRight size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
@@ -129,12 +129,12 @@ const WorkflowDemo = () => {
   return (
     <section id="how-it-works" className="py-32 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-32">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[11px] font-bold tracking-[0.1em] uppercase mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[11px] font-bold tracking-[0.1em] uppercase mb-6 md:mb-8"
           >
             How it Works
           </motion.div>
@@ -143,16 +143,16 @@ const WorkflowDemo = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl lg:text-7xl font-bold mb-8"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8"
           >
-            The teammate you've <br /> always <span className="text-gradient">wanted.</span>
+            The teammate you've <br className="hidden md:block" /> always <span className="text-gradient">wanted.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-text-body"
+            className="text-lg md:text-xl text-text-body px-4 md:px-0"
           >
             Ventus isn't just software. It's a proactive member of your team that handles the "messy middle" of enterprise work.
           </motion.p>

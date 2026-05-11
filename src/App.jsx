@@ -16,7 +16,7 @@ function App() {
   useLenis();
 
   return (
-    <div className="relative selection:bg-blue-100 selection:text-blue-900">
+    <div className="relative min-h-screen w-full overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <main>
         <Hero />

@@ -93,25 +93,25 @@ const Hero = () => {
             Next-Gen Enterprise AI
           </div>
 
-          <h1 className="text-6xl md:text-[5rem] font-bold leading-[1.05] tracking-tight mb-8 text-black max-w-5xl">
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold leading-[1.1] tracking-tight mb-6 md:mb-8 text-black max-w-5xl">
             Hire Ventus<br /> Your AI Teammate
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl leading-relaxed font-medium">
-            AI that operates, communicates, learns, and delivers powering <br /><span className="text-black font-bold">  Dental RCM, Medical RCM, and more.</span>
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-8 md:mb-12 max-w-2xl leading-relaxed font-medium">
+            AI that operates, communicates, learns, and delivers powering <br className="hidden md:block" />  <span className="text-black font-bold">  Dental RCM, Medical RCM, and more.</span>
           </p>
 
-          <div className="flex flex-wrap justify-center gap-5">
-            <a href="#cta">
-              <button className="bg-black text-white px-10 py-5 rounded-full font-bold text-lg flex items-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-black/10 group">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
+            <a href="#cta" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto bg-black text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-black/10 group">
                 Meet Your AI Teammate
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </a>
-            <a href="#how-it-works">
-              <button className="flex items-center gap-4 px-10 py-5 rounded-full font-bold text-lg text-black bg-white border border-gray-200 hover:bg-gray-50 transition-all shadow-sm group">
-                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-white transition-colors">
-                  <Play size={14} fill="black" />
+            <a href="#how-it-works" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-4 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg text-black bg-white border border-gray-200 hover:bg-gray-50 transition-all shadow-sm group">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-white transition-colors">
+                  <Play size={12} fill="black" />
                 </div>
                 See How It Works
               </button>
